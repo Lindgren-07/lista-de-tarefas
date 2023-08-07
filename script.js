@@ -3,17 +3,17 @@ function clicar() {
     let txt = document.getElementById("txt").value
     let lista = document.getElementById("lista")
     afazeres.push(txt)
-    
-   for(let i = 0; i < 1; i++){
+
+    if(txt == "" ){
+        alert("por favor digite algo")
+    }
+    else{
     let item = document.createElement("option")
     lista.appendChild(item)
-    item.innerHTML = ` * ${afazeres}`
-   }
-   txt.value = " "
+    item.innerHTML = `  *${txt}`
+    document.getElementById("txt").value = " "
+    document.getElementById("txt").focus()
+    }
    
-  
-  
-
-   
-    
+ 
 }
